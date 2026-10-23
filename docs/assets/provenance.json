@@ -1,0 +1,12 @@
+{
+  "artwork": "Original SVG illustrations made for ROMA",
+  "type": "Artistic reconstructions, not facsimiles of ancient portraits",
+  "files": [
+    "sulla.svg",
+    "caesar.svg",
+    "crassus.svg",
+    "pompey.svg",
+    "roma-icon.svg"
+  ],
+  "license": "MIT"
+}
