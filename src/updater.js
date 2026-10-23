@@ -35,7 +35,7 @@
  function showPending(){
   if(!pending)return;
   const unsaved=Boolean(window.atlasHasUnsavedProgress),busy=reviewBusy()||unsaved;
-  const message=unsaved?'Обновление отложено: браузер не сохранил прогресс. Оставьте приложение открытым, чтобы не потерять повторения.':handoffUnavailable?'Автообновление отложено: браузер запретил временное сохранение. Можно обновить вручную.':Date.now()<retryAt?'Новая версия пока недоступна целиком. Повторим попытку позже.':busy?'Новая версия готова. Обновление подождёт завершения повторения или прокрутки.':enabled?'Новая версия готова. Приложение обновится автоматически; настройки и прогресс сохранятся.':'Доступна новая версия приложения.';
+  const message=unsaved?'Обновление отложено: браузер не сохранил прогресс. Оставьте приложение открытым, чтобы не потерять повторения.':handoffUnavailable?'Автообновление отложено: браузер запретил временное сохранение. Можно обновить вручную.':Date.now()<retryAt?'Новая версия пока недоступна целиком. Повторим попытку позже.':busy?'Новая версия готова. Обновление подождёт завершения повторения.':enabled?'Новая версия готова. Приложение обновится автоматически; настройки и прогресс сохранятся.':'Доступна новая версия приложения.';
   setStatus(message);document.querySelector('#update-banner-text').textContent=message;
   banner.hidden=document.hidden||Date.now()<snoozeUntil;
   applyButton.hidden=false;applyButton.disabled=busy;document.querySelector('#update-now').disabled=busy;
